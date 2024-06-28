@@ -12,6 +12,8 @@ The dataset consists of two main files:
 - `fraudTest.csv`: Test dataset for evaluating model performance.
 
 Each transaction record includes attributes such as transaction time, amount, merchant information, and whether the transaction was fraudulent (`is_fraud`).
+The dataset can be accessed from here:
+https://drive.google.com/drive/folders/1MlPUy_9fN3bfWJJFyAoeg6C3VRXIfKaA?usp=sharing
 
 ## Project Structure
 
