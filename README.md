@@ -1,78 +1,78 @@
-# Credit Card Fraud Detection
+Credit Card Fraud Detection Project
 Overview
 
-This project implements machine learning models to detect fraudulent credit card transactions. It includes data preprocessing, model training, and evaluation using Python and scikit-learn.
-Files Included
+This project aims to detect fraudulent credit card transactions using machine learning algorithms. The dataset contains simulated transaction data spanning from 1st Jan 2019 to 31st Dec 2020. It includes transactions from 1000 customers across 800 merchants.
+Objective
 
-    fraudTrain.csv: Training dataset containing transaction information.
-    fraudTest.csv: Test dataset for evaluating model performance.
-    credit_card_fraud_detection.py: Python script for data preprocessing, model training, and evaluation.
+Build and evaluate machine learning models to classify transactions as fraudulent or legitimate.
+Dataset
 
+The dataset (fraudTrain.csv and fraudTest.csv) includes the following fields:
+
+    amt: Transaction amount
+    merchant: Merchant name
+    category: Transaction category
+    city: Merchant city
+    state: Merchant state
+    job: Customer's occupation
+    is_fraud: Binary indicator (1 for fraudulent, 0 for legitimate)
+
+Algorithms Used
+
+    Logistic Regression
+    Decision Trees
+    Random Forests
+
+Code Structure
 Prerequisites
 
-Ensure you have Python 3.x installed along with the following libraries:
+    Python 3
+    Libraries: numpy, pandas, scikit-learn
 
-    NumPy
-    pandas
-    scikit-learn
+Installation
 
-You can install the required libraries using pip:
-
-bash
-
-pip install numpy pandas scikit-learn
-
-Running the Script
-
-    Download the Datasets:
-        Place fraudTrain.csv and fraudTest.csv in the same directory as credit_card_fraud_detection.py.
-
-    Execute the Script:
-    Run the Python script from the command line:
+    Clone the repository:
 
     bash
 
-    python credit_card_fraud_detection.py
+git clone https://github.com/your_username/credit-card-fraud-detection.git
 
-Data Preprocessing
+Install dependencies:
 
-    Cleaning: Dropping unnecessary columns (Unnamed: 0, trans_date_trans_time, cc_num, first, last, street, dob, trans_num).
-    Feature Engineering: Limiting unique categorical values for high-cardinality features (merchant, category, city, state, job).
-    One-Hot Encoding: Converting categorical variables into binary vectors for model compatibility.
+bash
 
-Models Implemented
+    pip install -r requirements.txt
 
-    Logistic Regression:
-        Used for baseline classification with linear decision boundary.
-    Decision Tree Classifier:
-        Decision-making tree structure for non-linear decision boundaries.
-    Random Forest Classifier:
-        Ensemble of decision trees to improve robustness and accuracy.
+Usage
+
+    Data Preparation:
+        Ensure fraudTrain.csv and fraudTest.csv are in the project directory.
+
+    Model Training and Evaluation:
+        Run credit_card_fraud_detection.py to train and evaluate models.
+        Adjust parameters or algorithms in the script as needed.
 
 Evaluation Metrics
 
-    Accuracy: Percentage of correct predictions out of total predictions.
+    Accuracy: Percentage of correctly predicted transactions.
     F1 Score: Harmonic mean of precision and recall, useful for imbalanced classes.
 
 Results
-Logistic Regression
 
-    Accuracy: 1.00
-    F1 Score: 0.00
-    Classification Report: Precision and recall statistics for fraud and non-fraud classes.
+Results of model evaluation on the test set:
 
-Decision Tree Classifier
+    Logistic Regression:
+        Accuracy: 1.00
+        F1 Score: 0.00
 
-    Accuracy: 0.99
-    F1 Score: 0.42
-    Classification Report: Detailed breakdown of model performance metrics.
+    Decision Tree Classifier:
+        Accuracy: 0.99
+        F1 Score: 0.42
 
-Random Forest Classifier
-
-    Accuracy: 0.99
-    F1 Score: 0.01
-    Classification Report: Evaluation metrics highlighting strengths and weaknesses.
+    Random Forest Classifier:
+        Accuracy: 0.99
+        F1 Score: 0.01
 
 Conclusion
 
-The models demonstrate varying levels of effectiveness in detecting fraudulent transactions. Further enhancements such as hyperparameter tuning or feature engineering could potentially improve performance.
+The project demonstrates various machine learning techniques for detecting fraudulent credit card transactions. Further improvements can be made by fine-tuning model parameters or exploring additional algorithms.
